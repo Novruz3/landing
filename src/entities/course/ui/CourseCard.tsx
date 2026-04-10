@@ -1,10 +1,13 @@
 import { Course } from "@/src/shared/types/course";
 import Button from "@/src/shared/ui/Button";
+import ArrowRightIcon from "@/src/shared/ui/icons/RightIcon";
 import Image from "next/image";
 
 function CourseCard({ title, color, image, price, description }: Course) {
   return (
-    <div className={`p-6 rounded-2xl text-white ${color} flex`}>
+    <div
+      className={`p-6 rounded-2xl ${color === "bg-orange-600" ? "text-black" : "text-white"} ${color} flex`}
+    >
       <div>
         <h3 className="text-lg font-bold mb-4">{title}</h3>
         <p>{description}</p>
@@ -15,7 +18,7 @@ function CourseCard({ title, color, image, price, description }: Course) {
           {price}$
         </Button>
       </div>
-      <div>
+      <div className="flex flex-col justify-between">
         <Image
           src={image}
           alt={title}
@@ -23,7 +26,12 @@ function CourseCard({ title, color, image, price, description }: Course) {
           height={150}
           className="rounded-lg"
         />
-        <Button>Подробнее</Button>
+        <Button className="flex items-center">
+          More
+          <span>
+            <ArrowRightIcon />
+          </span>
+        </Button>
       </div>
     </div>
   );

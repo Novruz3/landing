@@ -7,14 +7,14 @@ function Hero() {
       <div className="max-w-6xl mx-auto bg-linear-to-r from-purple-600 to-indigo-500 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between">
         <div className="text-white max-w-md">
           <h1 className="text-3xl font-bold mb-4">
-            Школа программирования для детей
+            Programming school for kids from 7 to 14 years old
           </h1>
-          <p className="mb-6">Обучаем детей программированию через практику</p>
+          <p className="mb-6">We teach children programming through practice</p>
           <Button
             color="bg-yellow-400"
             className="text-black px-6 py-3 rounded-xl font-semibold"
           >
-            Попробовать бесплатно
+            Try for free
           </Button>
         </div>
         <Image
