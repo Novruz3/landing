@@ -1,8 +1,10 @@
+import { cn } from "@/src/shared/lib/utils";
+
 interface ButtonProps {
   children: React.ReactNode;
   className?: string;
   type?: "button" | "submit";
-  color? : string
+  color?: string;
 }
 
 export default function Button({
@@ -14,7 +16,11 @@ export default function Button({
   return (
     <button
       type={type}
-      className={`px-6 py-3 rounded-xl font-semibold cursor-pointer ${color} ${className}`}
+      className={cn(
+        "cursor-pointer rounded-xl px-6 py-2 font-semibold",
+        color,
+        className,
+      )}
     >
       {children}
     </button>

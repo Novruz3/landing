@@ -1,8 +1,11 @@
+import { cn } from "@/src/shared/lib/utils";
+
 interface InputProps {
   type?: string;
   placeholder?: string;
   required?: boolean;
   value?: string;
+  className?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -11,8 +14,8 @@ export default function Input({
   placeholder,
   value,
   onChange,
-  required
-  
+  required,
+  className,
 }: InputProps) {
   return (
     <input
@@ -21,7 +24,10 @@ export default function Input({
       required={required}
       value={value}
       onChange={onChange}
-      className="p-3 rounded-lg w-full text-black border bg-white"
+      className={cn(
+        "w-full rounded-lg border bg-white p-3 text-black",
+        className,
+      )}
     />
   );
 }

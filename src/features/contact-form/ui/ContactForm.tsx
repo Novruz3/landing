@@ -17,22 +17,27 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-      
       <Input
         required
-        placeholder="Name"
+        placeholder="Your name"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        className="rounded-4xl! p-4!"
       />
       <Input
         required
-        placeholder="Phone"
+        placeholder="Phone number"
         type="tel"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
+        className="rounded-4xl! p-4!"
       />
-      <Button color="bg-yellow-500" type="submit" className="text-black">
-        Submit
+      <Button
+        color="bg-yellow-300"
+        type="submit"
+        className="text-black rounded-4xl! p-4! hover:bg-yellow-200"
+      >
+        Submit request
       </Button>
     </form>
   );
